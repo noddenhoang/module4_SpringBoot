@@ -29,7 +29,6 @@ public class TranslateController {
         if (dictionary.containsKey(word.trim().toLowerCase())) {
             return ResponseEntity.ok(dictionary.get(word.trim().toLowerCase()));
         } else {
-            // return not found and display "Không tìm thấy từ trong từ điển"
             return ResponseEntity.status(404).body("Không tìm thấy từ trong từ điển");
         }
     }
